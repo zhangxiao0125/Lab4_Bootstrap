@@ -6,23 +6,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
 
-    <title>Hello, world!</title>
+    <title>Quejas UMA</title>
+    
   </head>
   <body class="container-md border border-primary">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img alt="Brand" width="30" height="24"
+          src="C:\Desktop\I.U.21-22\practica4\Lab4_Bootstrap\Lab4\DRaNQw9X0AAeRmS.png">
+          </a>
+        <a class="navbar-brand" href="#">UMA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
       <header>
-        <h1>By by!</h1>
+        <h1>QUEJAS</h1>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="C:\Desktop\I.U.21-22\practica4\Lab4_Bootstrap\Lab4\Buzón-de-quejas.png" class="d-block w-100" alt="quejas">
+            </div>
+          </div>
+        </div>
       </header>
-    <script src="node_modules/Bootstrap/dist/js/Bootstrap.min.js"></script>
-    <main class="row">
-        <article class="col-8 col-lg-10 border">
-        <h2>¡Artículos!</h2>
-        </article>
-        <article class="col-4 col-lg-2 border">
-        <h2>¡Otros temas de interes!</h2>
-        </article>
+      <body class="container-sm">
+        <main class="row justify-content-center">
+          <form class="col-md-8 needs-validation" novalidate>
+              <div class="my-2">
+                <label for="emailaddress" class="form-label">Email</label>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">
+                    <i class="bi bi-envelope"></i>
+                  </span>
+                  <input type="email" class="form-control" id="emailaddress" required>
+                </div>
+                <div class="invalid-feedback">
+                  Email inválido, un ejemplo de email válido: jballesteros@uma.es
+                </div>
+                <div class="valid-feedback">
+                  Email válido.
+                </div>
+              </div>
+
+              <div class="my-2">
+                <label for="descripcionproblema" class="form-label">Describe tu problema</label>
+                  <textarea class="form-control" id="descripcionproblema" rows="3" required></textarea>
+              </div>
+              <label for="alaatencion" class="form-label">Vicerrectorado destino</label>
+              <div class="input-group mb-3">
+                  <select class="form-select" id="datalistOptions" required>
+                    <option selected>Escribe para buscar...</option>
+                    <option value="1">Vicerrectorado de Investigación y Transferencia</option>
+                    <option value="2">Vicerrectorado de Cultura</option>
+                    <option value="3">Vicerrectorado de Empresa, Territorio y Transformación Digital</option>
+                    <option value="4">Vicerrectorado de Igualdad, Diversidad y Acción Social</option>
+                    <option value="5">Vicerrectorado de Personal docente e Investigador</option>
+                  </select>
+
+                  <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                </div>   
+              </div>
+              <div class="my-2">
+                <label for="adjuntos" class="form-label">Añade documentación en un zip se lo consideras necesario.</label>
+                <input class="form-control" type="file" id="adjuntos">
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar queja</button>
+              </div>
+            </form>
         </main>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()</script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+       <body> 
+        <div class="container bg-light">
+          <footer class="py-5 mt-5">
+            <div class="row">
+              <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+              </div>
         
+              <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-4 offset-1">
+                <form>
+                  <h5>Subscribe to our newsletter</h5>
+                  <p>Monthly digest of whats new and exciting from us.</p>
+                  <div class="d-flex w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <button class="btn btn-primary" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+              <p>© 2021 Company, Inc. All rights reserved.</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+      </body>
   </body>
 </html>
